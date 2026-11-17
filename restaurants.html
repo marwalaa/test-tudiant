@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Parcourez notre carnet d’adresses gourmandes à Dijon et trouvez votre prochaine table.">
+  <title>Les restaurants — Dijon à table</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Dijon à table, accueil">dijon<span>à</span>table<span class="wordmark-dot">.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <a class="nav-link" href="index.html">L’esprit dijonnais</a>
+      <a class="nav-link active" href="restaurants.html">Les restaurants</a>
+      <a class="nav-cta" href="#selection">Trouver ma table <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="listing-hero">
+      <p class="eyebrow"><span class="eyebrow-line"></span> Le carnet d’adresses</p>
+      <h1>On se retrouve<br><em>à table ?</em></h1>
+      <p>Une envie, une occasion, un quartier : trouvez l’adresse qui vous ressemble.</p>
+      <div class="listing-doodle" aria-hidden="true">✳</div>
+    </section>
+
+    <section class="listing-section section-wrap" id="selection">
+      <div class="listing-toolbar">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Nos idées gourmandes</p>
+          <h2>La sélection <em>du moment.</em></h2>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">Rechercher un restaurant ou une cuisine</span>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" id="restaurant-search" placeholder="Une adresse, une envie…" autocomplete="off">
+        </label>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filtrer par type de cuisine">
+        <button class="filter-chip selected" type="button" data-filter="all" aria-pressed="true">Tout voir</button>
+        <button class="filter-chip" type="button" data-filter="bistronomie" aria-pressed="false">Bistronomie</button>
+        <button class="filter-chip" type="button" data-filter="tradition" aria-pressed="false">Tradition</button>
+        <button class="filter-chip" type="button" data-filter="du-monde" aria-pressed="false">Cuisine du monde</button>
+        <button class="filter-chip" type="button" data-filter="vegetarien" aria-pressed="false">Végétarien</button>
+      </div>
+      <p class="results-count" aria-live="polite"></p>
+
+      <div class="restaurant-grid">
+        <article class="restaurant-card" data-categories="bistronomie tradition" data-search="loiseau des ducs gastronomique bourguignon centre historique">
+          <a class="restaurant-image" href="https://www.bernard-loiseau.com/fr/loiseau-des-ducs.html" target="_blank" rel="noopener noreferrer" aria-label="Découvrir Loiseau des Ducs (nouvel onglet)">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85" alt="Plat raffiné servi dans une belle assiette" loading="lazy">
+            <span class="card-badge">Bistronomie</span><span class="card-image-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="restaurant-info">
+            <div class="card-title-row"><h3>Loiseau des Ducs</h3><span class="card-index">01</span></div>
+            <p>La Bourgogne dans toute sa finesse, au cœur du centre historique.</p>
+            <div class="card-meta"><span>✳ Cuisine bourguignonne</span><span>Centre-ville</span></div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-categories="bistronomie" data-search="cibo cuisine italienne contemporaine centre">
+          <a class="restaurant-image" href="https://www.cibo-dijon.fr/" target="_blank" rel="noopener noreferrer" aria-label="Découvrir CIBO (nouvel onglet)">
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85" alt="Pâtes fraîches aux herbes et tomates" loading="lazy">
+            <span class="card-badge">Bistronomie</span><span class="card-image-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="restaurant-info">
+            <div class="card-title-row"><h3>CIBO</h3><span class="card-index">02</span></div>
+            <p>Une cuisine créative et contemporaine pour les curieux de belles assiettes.</p>
+            <div class="card-meta"><span>✳ Créative</span><span>Centre-ville</span></div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-categories="tradition" data-search="dz'envies dz envies bourgogne terroir cuisine de saison place wilson">
+          <a class="restaurant-image" href="https://www.dzenvies.com/" target="_blank" rel="noopener noreferrer" aria-label="Découvrir DZ'envies (nouvel onglet)">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="Assiette généreuse de légumes et produits frais" loading="lazy">
+            <span class="card-badge">Tradition</span><span class="card-image-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="restaurant-info">
+            <div class="card-title-row"><h3>DZ'envies</h3><span class="card-index">03</span></div>
+            <p>Une table de caractère où le terroir bourguignon a de belles histoires.</p>
+            <div class="card-meta"><span>✳ Terroir</span><span>Place Wilson</span></div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-categories="tradition bistronomie" data-search="pré aux clercs brasserie française place libération">
+          <a class="restaurant-image" href="https://www.lepreauxclercs.fr/" target="_blank" rel="noopener noreferrer" aria-label="Découvrir Le Pré aux Clercs (nouvel onglet)">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85" alt="Table élégamment dressée dans un restaurant" loading="lazy">
+            <span class="card-badge">Tradition</span><span class="card-image-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="restaurant-info">
+            <div class="card-title-row"><h3>Le Pré aux Clercs</h3><span class="card-index">04</span></div>
+            <p>Une adresse emblématique pour profiter de l’animation dijonnaise.</p>
+            <div class="card-meta"><span>✳ Brasserie française</span><span>Place de la Libération</span></div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-categories="bistronomie vegetarien" data-search="la maison des cariatides cuisine moderne végétale créative">
+          <a class="restaurant-image" href="https://www.lamaisondescariatides.com/" target="_blank" rel="noopener noreferrer" aria-label="Découvrir La Maison des Cariatides (nouvel onglet)">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="Légumes colorés dressés avec soin" loading="lazy">
+            <span class="card-badge">Cuisine créative</span><span class="card-image-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="restaurant-info">
+            <div class="card-title-row"><h3>La Maison des Cariatides</h3><span class="card-index">05</span></div>
+            <p>Un lieu singulier et une cuisine inventive qui suit le fil des saisons.</p>
+            <div class="card-meta"><span>✳ Créative & végétale</span><span>Centre historique</span></div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-categories="du-monde bistronomie" data-search="asperule cuisine française japonaise gastronomique dijon">
+          <a class="restaurant-image" href="https://www.google.com/maps/search/L'Asperule+Dijon" target="_blank" rel="noopener noreferrer" aria-label="Découvrir L'Asperule sur Google Maps (nouvel onglet)">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1000&q=85" alt="Assortiment de sushis japonais" loading="lazy">
+            <span class="card-badge">Cuisine du monde</span><span class="card-image-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="restaurant-info">
+            <div class="card-title-row"><h3>L’Asperule</h3><span class="card-index">06</span></div>
+            <p>Une cuisine délicate qui fait dialoguer les inspirations françaises et japonaises.</p>
+            <div class="card-meta"><span>✳ Cuisine franco-japonaise</span><span>Dijon</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="no-results" hidden>Pas d’adresse trouvée pour cette recherche. Essayez un autre mot-clé.</div>
+      <p class="directory-note">Notre sélection est une invitation à découvrir : pensez à vérifier les horaires, menus et disponibilités auprès des établissements avant votre visite.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark footer-wordmark" href="index.html">dijon<span>à</span>table<span class="wordmark-dot">.</span></a>
+    <p>Le plaisir des bonnes tables, en Bourgogne.</p>
+    <a class="footer-link" href="index.html">Retour à l’accueil <span aria-hidden="true">↗</span></a>
+    <small>© <span data-year></span> Dijon à table</small>
+  </footer>
+</body>
+</html>
